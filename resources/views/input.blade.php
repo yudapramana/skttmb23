@@ -59,9 +59,10 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="@if(app()->request->segment(1) == '') active @endif"><a href="/">Cari Data</a></li>
-                        <li class="@if(app()->request->segment(1) == 'daftar') active @endif"><a href="/daftar">Lihat
+                        {{-- <li class="@if(app()->request->segment(1) == 'daftar') active @endif"><a
+                                href="/daftar">Lihat
                                 Daftar
-                                Data</a></li>
+                                Data</a></li> --}}
 
                     </ul>
                 </div>
