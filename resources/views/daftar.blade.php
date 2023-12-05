@@ -89,7 +89,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            {{-- <th>Nomor Peserta</th> --}}
+                            <th>Nomor Peserta</th>
                             <th>Nama</th>
                             <th>Lokasi Jabatan</th>
                             <th>Titik Lokasi</th>
@@ -100,7 +100,7 @@
                         @foreach ($peserta as $key => $item)
                         <tr>
                             <th scope="row">{{ $key+1 }}</th>
-                            {{-- <th>{{ $item->nomor_peserta }}</th> --}}
+                            <th>{{ $item->nomor_peserta }}</th>
                             <td>{{ $item->nama }}</td>
                             <td>{{ $item->lokasi_jabatan }}</td>
                             <td>{{ $item->titik_lokasi }}</td>
