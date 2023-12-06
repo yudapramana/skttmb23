@@ -96,6 +96,26 @@
                         </div>
                         <input type="submit" class="btn btn-primary" value="Cari Data Peserta">
                     </form>
+                    @if(isset($sudah_isi))
+                    <table class="table">
+                        <tr>
+                            <th>nomor_peserta</th>
+                            <td>{{$peserta->nomor_peserta}}</td>
+                        </tr>
+                        <tr>
+                            <th>nama</th>
+                            <td>{{$peserta->nama}}</td>
+                        </tr>
+                        <tr>
+                            <th>lokasi_jabatan</th>
+                            <td>{{$peserta->lokasi_jabatan}}</td>
+                        </tr>
+                        <tr>
+                            <th>titik_lokasi</th>
+                            <td>{{$peserta->titik_lokasi}}</td>
+                        </tr>
+                    </table>
+                    @endif
                 </div>
                 @else
                 <div class="well">
@@ -126,6 +146,9 @@
                                 <option value="MTsN 1 Pesisir Selatan">MTsN 1 Pesisir Selatan (Salido)</option>
                                 <option value="MTsN 5 Pesisir Selatan">MTsN 5 Pesisir Selatan (Punggasan)</option>
                             </select>
+                            @if ($errors->has('titik_lokasi'))
+                            <span class="text-danger">{{ $errors->first('titik_lokasi') }}</span>
+                            @endif
                         </div>
                         <input type="submit" class="btn btn-primary" value="Simpan Titik Lokasi Ujian">
                     </form>
